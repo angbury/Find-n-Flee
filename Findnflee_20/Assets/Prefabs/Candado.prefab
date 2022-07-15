@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7241789171848451889}
   - component: {fileID: 9208126769591617484}
   - component: {fileID: 6038316339568065075}
+  - component: {fileID: 1754927492416433803}
   m_Layer: 0
   m_Name: Candado
   m_TagString: Untagged
@@ -103,15 +104,17 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.FindGameObject
         - HutongGames.PlayMaker.Actions.UiTextSetText
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.RandomFloat
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 00000000
-        actionStartIndex: 0000000003000000060000000a000000
-        actionHashCodes: 786b3902786b390209fbab049c512400
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0000000001
+        actionStartIndex: 0000000003000000060000000a0000000f000000
+        actionHashCodes: 786b3902786b390209fbab049c5124002ee01704
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -196,7 +199,25 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.8
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1.2
+        - useVariable: 1
+          name: random
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -217,7 +238,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000001200000013000000120000001200000013000000140000001200000011000000010000001400000007000000120000001700000013000000
+        paramDataType: 1200000012000000130000001200000012000000130000001400000012000000110000000100000014000000070000001200000017000000130000000f0000000f0000000f000000
         paramName:
         - objectName
         - withTag
@@ -234,8 +255,11 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 000000000100000000000000020000000300000001000000000000000400000000000000000000000100000001000000050000000000000002000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000010000000000000004000000000000000000000000000000
+        - min
+        - max
+        - storeResult
+        paramDataPos: 000000000100000000000000020000000300000001000000000000000400000000000000000000000100000001000000050000000000000002000000000000000100000002000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000010000000000000004000000000000000000000000000000000000000000000000000000
     - name: Comprobar Llaves
       description: 
       colorIndex: 1
@@ -386,15 +410,19 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetAudioPitch
+        - HutongGames.PlayMaker.Actions.AudioPlay
         - HutongGames.PlayMaker.Actions.UiTextSetText
         - HutongGames.PlayMaker.Actions.TweenRotation
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0000
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 09fbab04ea32f700
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 00010000
+        actionStartIndex: 0000000003000000080000000c000000
+        actionHashCodes: 32d5940281294e0409fbab04ea32f700
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -410,6 +438,22 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -445,7 +489,14 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 
-        fsmObjectParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.AudioClip
+          value: {fileID: 8300000, guid: 9b2250a33193b4114a2911076bfa7ead, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams:
@@ -457,6 +508,18 @@ MonoBehaviour:
           enumName: HutongGames.EasingFunction+Ease
           intValue: 22
         fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.8
         - useVariable: 0
           name: 
           tooltip: 
@@ -471,6 +534,12 @@ MonoBehaviour:
           value: 0.4
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -501,14 +570,23 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - 
         - FINISHED
-        byteData: 00000000000200000000000000000000000000000000
+        byteData: 0000000000000200000000000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000110000000100000007000000130000001c00000007000000130000001c000000140000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000
+        paramDataType: 140000000f00000001000000140000000f0000001800000011000000170000001400000012000000110000000100000007000000130000001c00000007000000130000001c000000140000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000
         paramName:
+        - gameObject
+        - pitch
+        - everyFrame
+        - gameObject
+        - volume
+        - oneShotClip
+        - WaitForEndOfClip
+        - finishedEvent
         - gameObject
         - text
         - resetOnExit
@@ -530,8 +608,8 @@ MonoBehaviour:
         - normalizedTime
         - everyFrame
         - updateType
-        paramDataPos: 0000000000000000000000000000000001000000000000000000000005000000010000000100000001000000000000000000000000000000010000000100000009000000000000000d0000001100000012000000
-        paramByteDataSize: 000000000000000000000000010000000400000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000
+        paramDataPos: 0000000000000000000000000100000001000000000000000000000000000000020000000000000001000000010000000200000000000000000000000600000001000000010000000300000002000000000000000000000003000000020000000a000000010000000e0000001200000013000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000400000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000
     - name: No tiene
       description: 
       colorIndex: 1
@@ -562,7 +640,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101
-        actionIsOpen: 0000
+        actionIsOpen: 0001
         actionStartIndex: 0000000005000000
         actionHashCodes: 9c51240009fbab04
         unityObjectParams: []
@@ -608,7 +686,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Nesecitas una llave para abrir este candado.
+          value: You need a key to open this padlock.
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -904,7 +982,13 @@ MonoBehaviour:
       isGlobal: 0
     globalTransitions: []
     variables:
-      floatVariables: []
+      floatVariables:
+      - useVariable: 1
+        name: random
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables:
       - useVariable: 1
         name: tus llves
@@ -951,7 +1035,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -960,7 +1044,7 @@ MonoBehaviour:
     password: 
     locked: 0
     manualUpdate: 0
-    outVariableIndices: 0300000004000000
+    outVariableIndices: 0400000005000000
     keepDelayedEventsOnStateExit: 0
     preprocessed: 1
     ExposedEvents: []
@@ -1027,6 +1111,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 7241789171848451889}
+--- !u!82 &1754927492416433803
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241789171848451888}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9b2250a33193b4114a2911076bfa7ead, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7241789172834161675
 GameObject:
   m_ObjectHideFlags: 0
